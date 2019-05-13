@@ -1,0 +1,98 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+  <view class="mine" wx:if="{{access_token}}">
+    <view class="nav">
+      <text wx:for="{{navData}}" data-index="{{index}}" bindtap="changeNav" class="{{index === currentIndex ? 'active' : ''}}">{{item}}</text>
+    </view>
+      <view wx:if="{{currentIndex === 0}}">
+        <view class="banner">
+          <image src="/asstes/images/reword.png"></image>
+          <view>
+            <view>所有在线课程都可免费观看！</view>
+            <view>报名线下班，每班6-10人，老学员都推荐！</view>
+          </view>
+        </view>
+        <view class="user">
+          <view class="person">
+            <view class="image">
+              <image src="{{user.photo}}"></image>
+            </view>
+            <view>
+              <text class="name">{{user.fullname}}</text>
+              <view>学籍编号： {{user.id}}</view>
+              <view class="vip">免费会员</view>
+            </view>
+          </view>
+          <view>
+            <text class="gray">电子邮箱</text>
+            <text>{{user.email}}</text>
+          </view>
+          <view>
+            <text class="gray">性别</text>
+            <text wx:if="{{user.sex === 1}}">男性</text>
+            <text wx:elif="{{user.sex === 2}}">女性</text>
+            <text wx:else="{{user.sex === 3}}">其它</text>
+          </view>
+          <view>
+            <text class="gray">公司</text>
+            <text wx:if="{{user.company}}">{{user.company}}</text>
+            <text wx:else>暂无</text>
+          </view>
+          <view>
+            <text class="gray">自我介绍</text>
+            <text wx:if="{{user.introduce}}">{{user.introduce}}</text>
+            <text wx:else>暂无</text>
+          </view>
+        </view>
+      </view>
+      <view wx:elif="{{currentIndex === 1}}">
+        <view wx:if="{{likeCourse.length === 0}}">
+          <view class="enpty">
+            <view class="image-enp">
+              <image src="/asstes/images/enpity.png"></image>
+            </view>
+            <text>没有记录</text>
+          </view>
+        </view>
+        <view wx:else>
+          <view class="main" wx:for="{{likeCourse}}">
+            <image src="{{item.photo}}"></image>
+            <view>
+              <text class="item-title">{{item.name}}</text>
+            </view>
+            <view class="item-body">
+              <text wx:if="{{item.body}}">{{item.body}}</text>
+              <text wx:else>暂无详情</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view wx:elif="{{currentIndex === 2}}">
+        <view wx:if="{{learned.length === 0}}">
+          <view class="enpty">
+            <view class="image-enp">
+              <image src="/asstes/images/enpity.png"></image>
+            </view>
+            <text>没有记录</text>
+          </view>
+        </view>
+        <view wx:else>
+          <view class="main" wx:for="{{learned}}">
+            <image src="{{item.photo}}"></image>
+            <view>
+              <text class="item-title">{{item.name}}</text>
+            </view>
+            <view class="item-body">
+              <text>{{item.body}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+  </view>
+  <view class="login" wx:else>
+    <view class="button" bindtap="toLogin">
+      <text>登录</text>
+    </view>
+    <text class="desc">您必须登录后才能访问</text>
+  </view>
+</view>

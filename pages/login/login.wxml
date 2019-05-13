@@ -1,0 +1,61 @@
+<!--pages/login/login.wxml-->
+<view class="header">
+  <image src="/asstes/images/back.png"></image>
+  <view class="button">
+    <view class="{{index === currentIndex ? 'active' : ''}}" wx:for="{{buttonData}}" data-index="{{index}}" bindtap="change">
+      <text>{{item}}</text>
+    </view>
+  </view>
+  <text bindtap="toIndex">首页</text>
+</view>
+<view>
+  <view class="log" wx:if="{{currentIndex === 0}}">
+    <form bindsubmit="login" bindreset="formReset">
+      <view>
+        <text>电子邮件</text>
+        <input name="user" type="text" placeholder="电子邮件" />
+      </view>
+      <view>
+        <text>密码</text>
+        <input name="password" type="password" placeholder="密码" />
+      </view>
+      <button form-type="submit">登录</button>
+    </form>
+  </view>
+  <view class="reg" wx:else>
+    <form bindsubmit="register">
+      <view class="name form-item">
+        <view>
+          <text>姓</text>
+          <input type="text" placeholder="姓"></input>
+        </view>
+        <view>
+          <text>名</text>
+          <input type="text" placeholder="名"></input>
+        </view>
+      </view>
+      <text class="desc">*请实名登记你的信息</text>
+      <view class="form-item">
+        <text>电子邮件</text>
+        <input type="text" placeholder="电子邮件"></input>
+      </view>
+      <view class="form-item">
+        <text>密码</text>
+        <text class="desc right">*半角英文数字6位数以上</text>
+        <input type="password" placeholder="密码"></input>
+      </view>
+      <view class="form-item">
+      <text>性别：</text>
+        <radio-group name="radio-group" bindchange='radiochange'>
+          <view wx:for="{{radioData}}">
+            <label for="{{item.name}}">
+              <text class='lable'>{{item.name}}</text>
+            </label>
+            <radio value="{{item.value}}"/>
+          </view>
+        </radio-group>
+      </view>
+      <button form-type="submit">登录</button>
+    </form>
+  </view>
+</view>

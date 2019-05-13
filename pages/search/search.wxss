@@ -1,0 +1,36 @@
+page{
+  background: #F0EFF0;
+}
+.search{
+  padding: 20rpx;
+}
+.search image{
+  position: absolute;
+  top: 36rpx;
+  left: 35rpx;
+  width: 28rpx;
+  height: 28rpx;  
+}
+input{
+  font-size: 28rpx;
+  border: 1px solid #ccc;
+  padding: 3rpx 0 5rpx 50rpx;
+  border-radius: 10rpx;
+  background: #fff;
+}
+.hot{
+  display: flex;
+  flex-wrap: wrap;
+}
+.hot view{
+  font-size: 28rpx;
+}
+.hot text{
+  padding: 15rpx;
+  color: #fff;
+  background: #1F99B0;
+  font-size: 28rpx;
+  border-radius: 8rpx;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}

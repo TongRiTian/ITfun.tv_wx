@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/calendar/calendar",
+    "pages/catorgories/catorgories",
+    "pages/mine/mine",
+    "pages/login/login",
+    "pages/courses/courses",
+    "pages/chapters/chapters",
+    "pages/news/news",
+    "pages/about/about",
+    "pages/search/search",
+    "pages/searched/searched",
+    "pages/toWebview/toWebview",
+    "pages/test/test"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#1F99B0",
+    "navigationBarTitleText": "长乐未央",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "发现",
+        "iconPath": "asstes/images/1.png",
+        "selectedIconPath": "asstes/images/1.1.png"
+      },
+      {
+        "pagePath": "pages/catorgories/catorgories",
+        "text": "分类",
+        "iconPath": "asstes/images/2.png",
+        "selectedIconPath": "asstes/images/2.1.png"
+      },
+      {
+        "pagePath": "pages/calendar/calendar",
+        "text": "课程日历",
+        "iconPath": "asstes/images/3.png",
+        "selectedIconPath": "asstes/images/3.1.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "asstes/images/4.png",
+        "selectedIconPath": "asstes/images/4.1.png"
+      }
+    ]
+  }
+}

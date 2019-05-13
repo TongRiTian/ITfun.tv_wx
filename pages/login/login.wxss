@@ -1,0 +1,102 @@
+/* pages/login/login.wxss */
+.header{
+  box-shadow: 0rpx 4rpx 4rpx #ccc;
+  padding: 25rpx 20rpx;
+  font-size: 28rpx;
+  color: #1F99B0;
+  display: flex;
+  justify-content: space-between;
+}
+.header image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.header .button{
+  width: 500rpx;
+  display: flex;
+}
+.header .button view{
+  flex: 1;
+  border: 1px solid #1F99B0;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+}
+.header .button .active{
+  background: #1F99B0;
+  color: #fff;
+}
+.header > text{
+  font-weight: bold;
+}
+.log{
+  padding: 0 60rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+}
+.log view{
+  margin-top: 40rpx;
+}
+.log text{
+  line-height: 60rpx;
+  margin-left: 15rpx;
+}
+.log view input{
+  background-color: #EDEDED;
+  padding: 10rpx 15rpx;
+} 
+.log button{
+  width: 80%;
+  margin-top: 50rpx;
+  font-size: 32rpx;
+  background: #1f99b0;
+  color: #fff;
+}
+.reg{
+  padding: 0 60rpx;
+  font-size: 30rpx;
+  overflow: hidden;
+}
+.reg .form-item{
+  margin-top: 40rpx;
+}
+.reg .name{
+  display: flex;
+  justify-content: space-between;
+}
+.reg .name view{
+  width: 310rpx;
+}
+.reg text{
+  line-height: 60rpx;
+  margin-left: 15rpx;
+}
+.desc{
+  font-size: 25rpx;
+}
+.right{
+  float: right;
+}
+.reg view input{
+  background-color: #EDEDED;
+  width: 100%;
+  padding: 10rpx 0;
+  text-indent: 15rpx;
+} 
+.reg radio-group{
+  display: flex;
+}
+.reg radio-group view{
+  flex: 1;
+  text-align: center;
+}
+.lable{
+  color: #1F99B0;
+}
+.reg button{
+  width: 80%;
+  margin-top: 50rpx;
+  font-size: 32rpx;
+  background: #1f99b0;
+  color: #fff;
+}

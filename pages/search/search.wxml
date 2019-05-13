@@ -1,0 +1,12 @@
+<view class="search">
+  <image src="/asstes/images/sarch.jpg"></image>
+  <input type="text" confirm-type="search" bindconfirm="search"></input>
+</view>
+<view class="content">
+  <view>热门搜索内容</view>
+  <view class="hot">
+    <text wx:for="{{hot}}" bindtap="searchHot"
+     data-keyWord="{{item}}">{{item}}</text>
+  </view>
+</view>
+
